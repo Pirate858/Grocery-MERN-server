@@ -32,6 +32,7 @@ app.get('/', ensureAuth, (req, res) => {
 });
 app.use('/items', require('./routes/items'));
 app.use('/auth', require('./routes/authRoutes'));
+app.use('/checkout', require('./routes/checkoutRoutes'));
 
 app.use(errorMiddleware.notFound);
 app.use(errorMiddleware.errorHandler);

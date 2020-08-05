@@ -27,6 +27,11 @@ const itemSchema = new Schema({
     default: 'kg',
     enum: ['kg', 'gm', 'ltr', 'nos'],
   },
+  category: {
+    type: String,
+    required: true,
+    enum: ['Fruits', 'Vegetables', 'Grains', 'Snacks', 'Others'],
+  },
 });
 
 module.exports = mongoose.model('Item', itemSchema);
